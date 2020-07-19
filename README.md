@@ -1,3 +1,27 @@
+# Uppgift1_PersonalRegister
+
+Uppgift 1 för Lexicon kursen (ReactJS Version).
+
+## Bakgrund
+
+Ett litet företag i restaurangbranschen kontaktar dig för att utveckla ett litet
+personalregister. De har endast två krav:
+
+1. Registret skall kunna ta emot och lagra anställda med namn och lön.
+2. Registret ska uppdateras när en ny anställd läggs till.
+
+## Uppgift 1
+
+Vilka tre komponenter bör ingå i programmet?
+
+- EmployeeForm
+- EmployeeRegister
+- App
+
+## Uppgift 3
+
+Skriv programmet
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
