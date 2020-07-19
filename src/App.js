@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 import EmployeeForm from "./components/EmployeeForm";
 import { Container } from "react-bootstrap";
@@ -9,7 +10,12 @@ function App() {
   const [employees, addEmployee] = useState([]);
 
   const addNewEmployee = (name, salary) => {
-    const id = "234";
+    //If name is null, undefined, "" or "   "
+    if (!(Boolean(name) && name.trim().length > 0)) {
+      name = "Unknown";
+    }
+
+    const id = uuidv4();
     addEmployee([...employees].concat({ id: id, name: name, salary: salary }));
   };
 
@@ -18,13 +24,6 @@ function App() {
       <h3 className="header">The employee Register</h3>
       <EmployeeForm addNewEmployee={addNewEmployee} />
       <EmployeeRegister employees={employees} />
-      {/* 
-      {employees.map((e) => (
-        <div>
-          <span>{e.name}</span>
-          <span>{e.salary}</span>
-        </div>
-      ))} */}
     </Container>
   );
 }
